@@ -34,10 +34,42 @@ body {
     opacity: 0.4;
 }
 
-/* Container */
-.container {
+/* 좌측 광고 사이드바 */
+.ad-sidebar-left {
+    position: fixed;
+    left: 10px;
+    top: 120px;
+    width: 160px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* 우측 광고 사이드바 */
+.ad-sidebar-right {
+    position: fixed;
+    right: 10px;
+    top: 120px;
+    width: 160px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+/* Hero Section Layout */
+.hero-section {
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Container */
+.container {
+    max-width: 100%;
+    margin: 0;
     background: white;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -394,7 +426,7 @@ button:active {
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    padding: 15px 0;
+    padding: 10px 0;
     transition: all 0.3s ease;
 }
 
@@ -600,6 +632,11 @@ button:active {
 @media (max-width: 768px) {
     body {
         padding: 100px 10px 10px;
+    }
+
+    .ad-sidebar-left,
+    .ad-sidebar-right {
+        display: none;
     }
 
     .container {
